@@ -19,12 +19,18 @@
 #include <ESP8266mDNS.h>
 
 // These are the pins used to control the motor shield
+//orginally this block but was causing problems so switched to int
+//#define motorb_pwm D2 // Motor B
+//#define motorb_dir D4
 
-#define motorb_pwm D2 // Motor B
-#define motorb_dir D4
+//#define motorA_pwm D1 // Motor A
+//#define motora_dir D3
 
-#define motorA_pwm D1 // Motor A
-#define motora_dir D3
+const int motorb_pwm = D2; // Motor B
+const int motorb_dir = D4;
+
+const int motorA_pwm = D1; // Motor A
+const int motora_dir = D3;
 
 // drivePower sets how fast the car goes
 // Can be set between 0 and 1023 (although car problaly wont move if values are too low)
